@@ -133,4 +133,5 @@ public/images/uploads/*
 public/stylesheets/**/*
 public/uploads/**/**  
 public/css/**/*
-public/js/**/*   
+public/js/**/*  
+ 
