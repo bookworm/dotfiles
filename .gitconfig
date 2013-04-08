@@ -1,14 +1,14 @@
 [core]
-	excludesfile = ~/.gitignore
-	editor = aquamacs
+  excludesfile = ~/.gitignore
+  editor = aquamacs
 [user]
-	email = k@2052
-	name = Ken Erickson
+  email = k@2052.me
+  name = Ken Erickson
 [diff]
   tool = vimdiff   
 [url "git://anongit.kde.org/"]
-    insteadOf = kde:
+  insteadOf = kde:
 [url "ssh://git@git.kde.org/"]
-    pushInsteadOf = kde:     
+  pushInsteadOf = kde:     
 [github]
-	user = bookworm        
+  user = bookworm        
