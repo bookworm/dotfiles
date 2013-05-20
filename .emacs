@@ -25,7 +25,9 @@
 ;; TODO and some margin to minibuffer
 
 ;; Make sure to include packages we want
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-ruby)
+(defvar my-packages '(textmate midnight yasnippet multiple-cursors mark-multiple color-theme color-theme-molokai 
+  ack-and-a-half helm rsense markdown-mode sr-speedbar buffer-move auto-complete tomatinho
+  starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-ruby)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -149,9 +151,9 @@
 ;; Color theme
 (require 'color-theme)
 (color-theme-initialize)
-(require 'color-theme-ava)
-(color-theme-ava)
-(set-default-font "Monaco-12")
+(require 'color-theme-molokai)
+(color-theme-molokai)
+(set-default-font "Ubuntu Mono-13")
 
 ;; Remove Fringes
 (set-fringe-mode 0)
@@ -201,9 +203,6 @@
 (defalias 'ack-same 'ack-and-a-half-same)
 (defalias 'ack-find-file 'ack-and-a-half-find-file)
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
-
-;; Ack Shortcut
-(define-key osx-key-mode-map `[(,osxkeys-command-key shift f)] 'ack-and-a-half)
 
 ;; nREPL
 (when (not (package-installed-p 'nrepl))
