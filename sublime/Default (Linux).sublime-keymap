@@ -1,0 +1,6 @@
+[
+	{"keys": ["alt+shift+r"], "command": "reindent" , "args": {"single_line": false}},
+	{ "keys": ["shift+d+f"], "command": "toggle_full_screen" },
+	{ "keys": ["alt+shift+f"], "command": "toggle_distraction_free" },
+	{ "keys": ["ctrl+alt+shift+a"], "command": "move_to", "args": {"to": "eol", "extend": false} }
+]
