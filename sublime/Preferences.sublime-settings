@@ -1,10 +1,19 @@
 {
-	"color_scheme": "Packages/MoonScript/Moon.tmTheme",
-	"font_face": "Ubuntu Mono",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"folder_exclude_patterns":
+	[
+		"node_modules",
+		".git",
+		"export",
+		"bower_components"
+	],
+	"font_face": "Inconsolata",
 	"font_size": 13,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"SmartMarkdown",
+		"Markdown Editing"
 	],
 	"ignored_words":
 	[
@@ -42,9 +51,6 @@
 		"blog",
 		"blogging",
 		"catalogue",
-		"clich",
-		"clich",
-		"clich",
 		"clich",
 		"cliche",
 		"cmd",
@@ -131,5 +137,5 @@
 	"show_minimap": false,
 	"spell_check": true,
 	"tab_size": 2,
-	"theme": "Cobalt2.sublime-theme"
+	"theme": "Spacegray.sublime-theme"
 }

@@ -2,19 +2,33 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"Alignment",
+		"All Autocomplete",
 		"Better CoffeeScript",
+		"Bison",
 		"CoffeeScript",
 		"Dayle Rees Color Schemes",
+		"Enhanced Clojure",
+		"Flex",
 		"HTML-CSS-JS Prettify",
+		"lispindent",
 		"Markdown Preview",
+		"Markdown Todo",
 		"MarkdownEditing",
 		"Package Control",
+		"paredit",
 		"Racket",
 		"ruby-slim.tmbundle",
 		"Sass",
 		"SmartMarkdown",
+		"Stylus",
+		"SublimeREPL",
+		"Theme - Centurion",
 		"Theme - Cobalt2",
+		"Theme - Spacegray",
+		"Tomorrow Color Schemes",
 		"Vala",
+		"VAlign",
 		"WordCount"
 	]
 }
