@@ -3,12 +3,13 @@
   editor = aquamacs
 [user]
   email = k@2052.me
-  name = Ken Erickson
+  name = K-2052
 [diff]
   tool = vimdiff   
+	external = ~/.bin/diff.py
 [url "git://anongit.kde.org/"]
   insteadOf = kde:
 [url "ssh://git@git.kde.org/"]
   pushInsteadOf = kde:     
 [github]
-  user = bookworm        
+  user = k2052

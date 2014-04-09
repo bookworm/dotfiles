@@ -8,12 +8,18 @@ Thumbs.db
 # WebServer
 *.log
 
+# Private
+resources/**
+inspiration/**
+inspo/**
+
 # Private config files
 heroku_env.rb
 deploy.rb 
 my_config.rb
 certs/*
 recurly.yml
+.env
 
 # Textmate
 *.tmproj
@@ -78,7 +84,6 @@ build/*
 # Rails
 pkg
 .bundle
-Gemfile.lock
 debug.log
 doc/rdoc
 activemodel/doc

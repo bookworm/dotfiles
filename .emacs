@@ -1,6 +1,9 @@
 ;; Add themes to load path
 (add-to-list 'load-path "~/.emacs.d/themes")
 
+;; Add vendor to load path
+(add-to-list 'load-path "~/.emacs.d/vendor")
+
 ;; Load Packages
 (require 'package)
 (add-to-list 'package-archives
@@ -25,17 +28,38 @@
 ;; TODO and some margin to minibuffer
 
 ;; Make sure to include packages we want
-(defvar my-packages '(textmate midnight yasnippet multiple-cursors mark-multiple color-theme color-theme-molokai 
-  ack-and-a-half helm rsense markdown-mode sr-speedbar buffer-move auto-complete tomatinho
-  starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-ruby)
+(defvar my-packages '(melpa textmate midnight yasnippet multiple-cursors clojure-mode mark-multiple color-theme 
+  color-theme-molokai ack-and-a-half helm rsense markdown-mode sr-speedbar buffer-move auto-complete tomatinho
+  starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-ruby geiser)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
+;; Sane shortcuts using ergoemacs 
+;; Disabled because it interfered with too many other things
+;; (add-to-list 'load-path "~/.emacs.d/vendor/ergoemacs-mode")
+;; (require 'ergoemacs-mode)
+;; (setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
+;; (setq ergoemacs-keyboard-layout "us") ;; Assumes QWERTY keyboard layout
+;; (ergoemacs-mode 1)
+
+;; Sane shortcuts for copy and paste
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+
+;; Sane shortcuts
+
+;; Save using crtl-s
+(global-set-key (kbd "C-s") 'save-buffer)
+
+;; Undo using crtl-s
+(global-set-key (kbd "C-z") 'undo)
+
 ;; Load Textmate Mode
-(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
 (require 'textmate)
 (textmate-mode)
 
@@ -177,8 +201,19 @@
 (require 'markdown-mode)
 
 ;; Autoload modes
+
+;; Markdown
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
   (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+;; Lua
+(autoload 'lua-mode "lua-mode.el" "Lua mode for editing Markdown files" t)
+  (setq auto-mode-alist (cons '("\\.lua" . lua-mode) auto-mode-alist))
+
+;; Moonscript
+(add-to-list 'load-path "~/.emacs.d/vendor/moonscript-mode")
+(require 'moonscript-mode)
+(require 'moonscriptrepl-mode)
 
 ;; Buffer Mover
 (require 'buffer-move)
@@ -226,3 +261,8 @@
 ;; Pomodoro
 (require 'tomatinho)
 (global-set-key (kbd "<f6>") 'tomatinho)
+
+;; Clojure Stuff
+
+;; Clojurescript files
+(add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
